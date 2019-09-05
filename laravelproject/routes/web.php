@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('countdowns');
 });
+
+
+Route::get('/countdowns/active', 'CountDownController@active');
+Route::resource('countdowns', 'CountDownController');
